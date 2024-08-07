@@ -26,7 +26,7 @@
         - 192.168.2.1/30
       key: 100
       mtu: 1400
-      # TODO: Supposedly there is a bug in netplan on Ubuntu 20.04 that does not allow this
+      # TODO: This appears to no longer be a bug in 22.04. This has been tested and it works.
       routes:
         - to: default
           via: 192.168.2.2
