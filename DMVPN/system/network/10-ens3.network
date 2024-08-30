@@ -1,0 +1,10 @@
+# /etc/systemd/network/10-ens3.network 
+
+[Match]
+Name=ens3
+
+[Network]
+Address=10.101.123.198/24
+
+[Network]
+Tunnel=dmvpn

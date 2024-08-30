@@ -1,0 +1,13 @@
+# /etc/systemd/network/11-gre.netdev
+
+[NetDev]
+Name=dmvpn
+Kind=gre
+MTUBytes=1472
+
+[Tunnel]
+Remote=any
+Local=any
+InputKey=42
+OutputKey=42
+TTL=64

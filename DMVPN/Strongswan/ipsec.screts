@@ -1,0 +1,3 @@
+# /usr/local/etc/ipsec.secrets 
+
+%any : PSK "cisco-cisco-cisco"

@@ -1,0 +1,32 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens3:
+      ignore-carrier: true # force the interface to be up always
+      addresses:
+        - 10.101.123.200/24
+    ens4:
+      ignore-carrier: false
+    ens5:
+      ignore-carrier: true
+
+  vlans:
+    # Configuration for management vlan
+    management:
+      id: 555
+      link: ens4
+      addresses:
+        - 100.80.4.125/30
+      nameservers:
+        addresses:
+          - 100.80.1.120
+    # Configuration for meter vlan
+    meter:
+      id: 4000
+      link: ens5
+      addresses:
+        - 100.80.8.1/24
+      nameservers:
+        addresses:
+          - 100.80.1.120
